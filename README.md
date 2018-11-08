@@ -1,8 +1,9 @@
 # times_tables
 Times Tables Visualization
 
-This is a visualization for the times tables from 1 to 200 (including the in-between numbers that are multiples of .01). 
-I used modular arithmetic to write the code:
+This is a visualization for the times tables from 1 to 200 (including the in-between numbers that are multiples of .01).
+
+For the code in Processing, I mapped the two numbers I wanted to connect up (call them i), which are in between 0 and 200, to a range between 0 and 2π. That gave me a fixed radius (I used 100px) and an angle (call it θ). Then I converted those to x and y by multiplying the radius by cos(θ) for x, and the radius by sin(θ) for y. That gave me a coordinate for each point (and even in between points, so you can do the in between times tables as well!) Then I connect up those coordinates with a line. Now I just do this over and over again, until all points are connected to something.
 
 ```
 0. Start with a circle with 200 points (I've chosen 200, your number could be anything, but we'll use 200 in the instructions).
